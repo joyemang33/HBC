@@ -41,8 +41,7 @@ struct RandQuery : QueryBase {
             return {values[l], values[r]};
         }
         else {
-            int d = max((int)values.size() / 10, 2);
-            int l = rnd() % d, r = values.size() - 1 - rnd() % d;
+            int l = rnd() % max((int)values.size() / 10, 1), r = values.size() - 1 - rnd() % max((int)values.size() / 10, 1);
             if (l > r) swap(l, r);
             return {values[l], values[r]};
         }
@@ -60,7 +59,6 @@ void initRand(const vector <double> &vs, long long rounds, long long seed = 0) {
     randQuery.init(vs, rounds, seed);
     queryPtr = &randQuery;
 }
-static pair <double, double> curQry;
 pair <double, double> getQuery() {
     static int tag = 1;
     if (tag) {
@@ -69,7 +67,7 @@ pair <double, double> getQuery() {
         initTime = cur - lstClock;
         lstClock = cur;
     }
-    return curQry = queryPtr -> getQuery();
+    return queryPtr -> getQuery();
 }
 int endQuery() {
     int res = queryPtr -> endQuery();
@@ -83,5 +81,5 @@ int endQuery() {
     return res;
 }
 void answer(long long res) {
-    printf("%lf %lf %lld\n", curQry.first, curQry.second, res);
+    printf("%lld\n", res);
 }

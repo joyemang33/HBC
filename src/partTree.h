@@ -32,6 +32,23 @@ struct PartTreeCnt {
     vector <PairNode> pairs;
     vector <int> vals[2];
     int dep;
+    
+    ull memoryUsage() {
+        ull result = 0;
+        for (auto i : pre[0]) {
+            result += i.sum.capacity() * sizeof(ull);
+            result += i.val.capacity() * sizeof(ull);
+        }
+        for (auto i : pre[1]) {
+            result += i.sum.capacity() * sizeof(ull);
+            result += i.val.capacity() * sizeof(ull);
+        }
+        result += pairs.capacity() * sizeof(PairNode);
+        result += vals[0].capacity() * sizeof(int);
+        result += vals[1].capacity() * sizeof(int);
+        return result;
+    }
+    
     ull build(ull x, ull l, ull r, int dep) {
         if (l > r) return 0;
         if (l == r) return vals[1][l] != inf;
