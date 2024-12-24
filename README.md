@@ -10,6 +10,7 @@ This repository contains C++ codes and datasets for the paper:
 
 Real-world datasets:
 
+<<<<<<< HEAD
 | Dataset | Download link                                                |
 | ------- | ------------------------------------------------------------ |
 | WQ      | [Link](http://konect.cc/networks/edit-bnwikisource/)         |
@@ -22,6 +23,20 @@ Real-world datasets:
 | ER      | [Link](http://konect.cc/networks/edit-ruwiktionary/)         |
 | EV      | [Link](http://konect.cc/networks/edit-viwiki/)               |
 | WT      | [Link](http://konect.cc/networks/edit-enwiktionary/)         |
+=======
+| Dataset | Download link |
+| - | - |
+| WQ | [Link](http://konect.cc/networks/edit-bnwikisource/) |
+| WN | [Link](http://konect.cc/networks/edit-itwikinews/) |
+| SO | [Link](http://konect.cc/networks/stackexchange-stackoverflow/) |
+| CU | [Link](http://konect.cc/networks/citeulike-ti/) |
+| BS | [Link](http://konect.cc/networks/bibsonomy-2ti/) |
+| TW | [Link](http://konect.cc/networks/munmun_twitterex_ut/) |
+| AM | [Link](http://konect.cc/networks/amazon-ratings/) |
+| ER | [Link](http://konect.cc/networks/edit-ruwiktionary/) |
+| EV | [Link](http://konect.cc/networks/edit-viwiki/) |
+| WT | [Link](http://konect.cc/networks/edit-enwiktionary/) |
+>>>>>>> 2e40661fd3661b9945d62c62f8216c20d1cc92cc
 
 ## How to Run the Codes
 
@@ -64,9 +79,18 @@ A general command of our program is like:
 
 There are two options for you :
 
+<<<<<<< HEAD
 | Parameters | Description       |
 | :--------- | :---------------- |
 | -thrs      | Number of threads |
 | -maxM      | Space usage (GB)  |
 
 Actual space usage generally sticks to the paramter, `maxM`, with minor difference.
+=======
+| Parameters | Description |
+|:---------------|:------------|
+| -thrs | Number of threads |
+| -maxM | Space usage (GB) |
+
+Actual space usage generally sticks to the paramter, `maxM`, with minor difference.
+>>>>>>> 2e40661fd3661b9945d62c62f8216c20d1cc92cc
