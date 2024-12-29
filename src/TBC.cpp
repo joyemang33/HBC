@@ -28,7 +28,6 @@ void MyInit() {
 ull calc(int delta) {
     ull sum = 0;
     
-	#pragma omp parallel for reduction(+:sum)
     for (auto &[pairs, vals] : sorted_pairs_) {
         vector<int> cnt(vals.size());
         int pos = 0, cur = 0;
