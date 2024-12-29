@@ -33,6 +33,7 @@ cd ./src && make
 #### 4. Parameters
 ``` -thrs [INT] ``` : number of threads for parallelized setting.
 ``` -maxM [INT] ``` : maximum memory usage (GB) for space-time trade-off experiments (**Section 6.3**).
+``` -alpha -beta ```: compression ratios $(\lambda_1, \lambda_2)$ for index compression (**Section 6.4**).
 
 ###  📊 Run
 Run the main experiment (**Section 6.1**) on `toydata.txt` by the following command:
